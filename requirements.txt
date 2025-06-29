@@ -1,0 +1,14 @@
+scikit-learn
+pandas
+numpy
+matplotlib
+seaborn
+joblib
+#xgboost
+#lightgbm
+#tensorflow
+#torch
+fastapi
+uvicorn
+streamlit
+ipykernel

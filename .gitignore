@@ -1,0 +1,16 @@
+GenAI/
+.venv/
+**.pyc
+__pycache__/
+*.pyo
+*.pyd
+.Python
+db.sqlite3
+.env
+*.db
+*.sqlite3
+*.log
+*.pot
+Airflow/logs/*
+Airflow/plugins/*
+outline.md

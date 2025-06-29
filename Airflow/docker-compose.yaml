@@ -1,0 +1,16 @@
+services:
+  airflow:
+    image: apache/airflow:slim-latest-python3.9
+    command: standalone
+    environment:
+      - AIRFLOW__CORE__EXECUTOR=SequentialExecutor
+      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=sqlite:////opt/airflow/airflow.db
+      - AIRFLOW__WEBSERVER__AUTH_BACKEND=airflow.auth.managed_user_auth
+      - _PIP_ADDITIONAL_REQUIREMENTS=pandas requests
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./data:/opt/airflow/data
+    ports:
+      - "8080:8080"
+    restart: always

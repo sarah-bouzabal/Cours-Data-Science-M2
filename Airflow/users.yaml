@@ -1,0 +1,5 @@
+users:
+  - username: airflow
+    email: admin@example.com
+    role: Admin
+    password: airflow
